@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+  </head>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      margin: 0;
+      padding: 20px;
+      text-align: top;
+      font-size: 50px;
+    }
+    .Dashboard {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      text-align: top;
+    }
+    .Ongoing,
+    .Completed,
+    .Upcoming,
+    .Overdue {
+      flex: 0.8;
+      min-height: 200px;
+      border: 2px solid grey;
+      border-radius: 20px;
+      padding: 10px;
+      font-size: 20px;
+    }
+    h3 {
+      border-bottom: 2px solid lightblue;
+      padding-bottom: 5px; /* space between text and line */
+      display: inline-block;
+    }
+    ul {
+      text-align: left;
+    }
+    /*img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 20px;
+    }*/
+    .container {
+      position: relative;
+      text-align: center;
+    }
+    .container img {
+      width: 100%;
+      height: 300px;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+
+    .Dash {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-100%, -50%);
+      color: white;
+      font-size: 80px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <img src="Images/Blue.jpg" />
+      <h1 class="Dash">Dashboard</h1>
+    </div>
+    <h2>Recents</h2>
+    <div class="Dashboard">
+      <div class="Ongoing">
+        <h3>Ongoing tasks</h3>
+        <ul>
+          <li>Ongoing Task 1</li>
+          <li>Ongoing Task 2</li>
+          <li>Ongoing Task 3</li>
+        </ul>
+
+        <p></p>
+      </div>
+      <div class="Completed">
+        <h3>Completed tasks</h3>
+        <ul>
+          <li>Completed Task 1</li>
+          <li>Completed Task 2</li>
+          <li>Completed Task 3</li>
+        </ul>
+      </div>
+      <div class="Upcoming">
+        <h3>Upcoming tasks</h3>
+        <ul>
+          <li>Upcoming Task 1</li>
+          <li>Upcoming Task 2</li>
+          <li>Upcoming Task 3</li>
+        </ul>
+      </div>
+      <div class="Overdue">
+        <h3>Overdue tasks</h3>
+        <ul>
+          <li>Overdue Task 1</li>
+          <li>Overdue Task 2</li>
+          <li>Overdue Task 3</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
