@@ -7,8 +7,8 @@
   </head>
   <style>
     body {
-      background-color: black;
-      color: white;
+      background-color: white;
+      color: black;
       margin: 0;
       padding: 20px;
       text-align: top;
@@ -65,47 +65,124 @@
       font-size: 80px;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
+
+    /*Sidebar*/
+    #sidebar-toggle {
+      display: none;
+    }
+    .sidebar {
+      position: fixed;
+      left: -350px;
+      top: 0;
+      width: 350px;
+      height: 100%;
+      background-color: white;
+      color: black;
+      padding-top: 10px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+      z-index: 1000;
+      border-radius: 30px;
+    }
+    #sidebar-toggle:checked ~ .sidebar {
+      left: 0;
+    }
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .sidebar a {
+      display: block;
+      color: black;
+      text-decoration: none;
+      padding: 15px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: background-color 0.3s ease;
+    }
+    .sidebar a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    .hamburger {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      width: 40px;
+      height: 40px;
+      right: -35px;
+      background-color: white;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      font-size: 24px;
+      z-index: 2000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      user-select: none;
+    }
+    .main {
+      margin-left: 0;
+      padding: 10px;
+      transition: filter 0.3s ease;
+    }
+    #sidebar-toggle:checked ~ .main {
+      filter: blur(2px);
+    }
   </style>
   <body>
-    <div class="container">
-      <img src="Images/Blue.jpg" />
-      <h1 class="Dash">Dashboard</h1>
-    </div>
-    <h2>Recents</h2>
-    <div class="Dashboard">
-      <div class="Ongoing">
-        <h3>Ongoing tasks</h3>
-        <ul>
-          <li>Ongoing Task 1</li>
-          <li>Ongoing Task 2</li>
-          <li>Ongoing Task 3</li>
-        </ul>
+    <input type="checkbox" id="sidebar-toggle" />
 
-        <p></p>
+    <div class="sidebar">
+      <label for="sidebar-toggle" class="hamburger">&#9776;</label>
+      <h2>Menu</h2>
+      <a href="#">Dashboard</a>
+      <a href="#">Projects</a>
+      <a href="#">Tasks</a>
+      <a href="#">Teams</a>
+      <a href="#">Settings</a>
+    </div>
+    <div class="main">
+      <div class="container">
+        <img src="Images/Blue.jpg" />
+        <h1 class="Dash">Dashboard</h1>
       </div>
-      <div class="Completed">
-        <h3>Completed tasks</h3>
-        <ul>
-          <li>Completed Task 1</li>
-          <li>Completed Task 2</li>
-          <li>Completed Task 3</li>
-        </ul>
-      </div>
-      <div class="Upcoming">
-        <h3>Upcoming tasks</h3>
-        <ul>
-          <li>Upcoming Task 1</li>
-          <li>Upcoming Task 2</li>
-          <li>Upcoming Task 3</li>
-        </ul>
-      </div>
-      <div class="Overdue">
-        <h3>Overdue tasks</h3>
-        <ul>
-          <li>Overdue Task 1</li>
-          <li>Overdue Task 2</li>
-          <li>Overdue Task 3</li>
-        </ul>
+      <h2>Recents</h2>
+      <div class="Dashboard">
+        <div class="Ongoing">
+          <h3>Ongoing tasks</h3>
+          <ul>
+            <li>Ongoing Task 1</li>
+            <li>Ongoing Task 2</li>
+            <li>Ongoing Task 3</li>
+          </ul>
+
+          <p></p>
+        </div>
+        <div class="Completed">
+          <h3>Completed tasks</h3>
+          <ul>
+            <li>Completed Task 1</li>
+            <li>Completed Task 2</li>
+            <li>Completed Task 3</li>
+          </ul>
+        </div>
+        <div class="Upcoming">
+          <h3>Upcoming tasks</h3>
+          <ul>
+            <li>Upcoming Task 1</li>
+            <li>Upcoming Task 2</li>
+            <li>Upcoming Task 3</li>
+          </ul>
+        </div>
+        <div class="Overdue">
+          <h3>Overdue tasks</h3>
+          <ul>
+            <li>Overdue Task 1</li>
+            <li>Overdue Task 2</li>
+            <li>Overdue Task 3</li>
+          </ul>
+        </div>
       </div>
     </div>
   </body>
